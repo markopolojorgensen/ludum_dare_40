@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://wind.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
 
 [node name="game" type="Node2D"]
 
@@ -15,5 +16,9 @@ one_shot = false
 autostart = true
 
 [node name="wind" parent="." instance=ExtResource( 2 )]
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 522.646, 399.339 )
 
 

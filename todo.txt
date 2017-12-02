@@ -58,8 +58,9 @@ something something coinbox hero
 
 The more you have, the worse it is.
 LEAF WARDEN
-  git repo
-
+  uncat
+    speed powerups?
+    X git repo
   leaves
     X leaves fall to the ground
     X leaf shadow shows where it will hit the ground
@@ -70,9 +71,15 @@ LEAF WARDEN
     leaf spawn rate must be variable
     leaf transition to starting position
     leaf falling velocity variability varies propotionally to the wind speed
+  player
+    X player can move
+    X player can rake
+    velocity lerp
   rake
-    whirlwind attack (charge -> release)
     raking moves leaves
+    can't move while raking
+    can't rake while raking
+    whirlwind attack (charge -> release)
   leaf piles
     raking enough leaves together does something
   wind
