@@ -61,9 +61,13 @@ LEAF WARDEN
   git repo
 
   leaves
+    X leaves fall to the ground
+    X leaf shadow shows where it will hit the ground
+    X multiple leaves fall at the same time
+    leaves need to not fall up forever
+    leaves need to not fall outside the window horizontally
+    leaf falling velocity variability varies propotionally to the wind speed
     leaf transition to starting position
-    leaves fall to the ground
-    leaf shadow shows where it will hit the ground
   rake
     whirlwind attack (charge -> release)
 
