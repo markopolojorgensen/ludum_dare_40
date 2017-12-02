@@ -67,18 +67,20 @@ LEAF WARDEN
     X multiple leaves fall at the same time
     X leaves need to not fall up forever
     X leaves need to not fall outside the window horizontally
-    leaevs re-pick destination when wrapping around the screen
+    leaves re-pick destination when wrapping around the screen?
     leaf spawn rate must be variable
     leaf transition to starting position
     leaf falling velocity variability varies propotionally to the wind speed
+    don't wrap leaves when being raked
   player
     X player can move
     X player can rake
     velocity lerp
+    probably should have a frowny face while they get buried by leaves
   rake
-    raking moves leaves
+    X raking moves leaves
+    X can't rake while raking
     can't move while raking
-    can't rake while raking
     whirlwind attack (charge -> release)
   leaf piles
     raking enough leaves together does something
