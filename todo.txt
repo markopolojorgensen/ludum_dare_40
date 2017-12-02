@@ -1,0 +1,91 @@
+twitch offline banner
+
+
+
+Compo or Jam?
+  probably Jam
+
+
+The more money you have, the more you get sued?
+The more disease/hatred/death/problems/etc
+The more twitch viewers you have
+    banning people
+    adding new cursewords to the block list
+    writing new chatbots
+    banners and stuff
+
+
+
+
+
+
+orisinal
+  autumn leaves or some stupid name like that
+    last station repair the train / spaceteam vibe
+
+
+Tower defense? NO
+top down / sidescroller? Top Down?
+
+The more leaves you have, the worse it is
+  higher % of ground cover -> more wind
+    eventually you get blown away by the wind
+
+trees plant more trees
+  helicopter seeds / acorns / etc
+  more trees -> more leaves -> more work for you
+  there are monsters in the leaves?
+
+something something coinbox hero
+  rediculous weapons prevent leaves from hitting the ground
+    laser turrets
+    machine gun turrets
+    paratrooping squirrels?
+    flamethrower?
+    rake
+      swinging rake around generates a whirlwind that does something
+        chargeable move
+    wind comes through periodically and scatters piles if you don't scoop them up
+
+
+
+
+
+
+
+
+
+
+The more you have, the worse it is.
+LEAF WARDEN
+  git repo
+
+  leaves
+    leaf transition to starting position
+    leaves fall to the ground
+    leaf shadow shows where it will hit the ground
+  rake
+    whirlwind attack (charge -> release)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
