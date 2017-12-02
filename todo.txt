@@ -64,12 +64,23 @@ LEAF WARDEN
     X leaves fall to the ground
     X leaf shadow shows where it will hit the ground
     X multiple leaves fall at the same time
-    leaves need to not fall up forever
-    leaves need to not fall outside the window horizontally
-    leaf falling velocity variability varies propotionally to the wind speed
+    X leaves need to not fall up forever
+    X leaves need to not fall outside the window horizontally
+    leaevs re-pick destination when wrapping around the screen
+    leaf spawn rate must be variable
     leaf transition to starting position
+    leaf falling velocity variability varies propotionally to the wind speed
   rake
     whirlwind attack (charge -> release)
+    raking moves leaves
+  leaf piles
+    raking enough leaves together does something
+  wind
+    X wind blows falling leaves around
+    wind speed increases with leaf presence
+    wind has a chance to blow grounded leaves back into the air
+      chance increases with wind speed
+    wind blows vertically as well as horizontally?
 
 
 

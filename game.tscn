@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://wind.tscn" type="PackedScene" id=2]
 
 [node name="game" type="Node2D"]
 
@@ -12,5 +13,7 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
+
+[node name="wind" parent="." instance=ExtResource( 2 )]
 
 
