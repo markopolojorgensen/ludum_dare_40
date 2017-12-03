@@ -120,6 +120,8 @@ func get_raked(rake):
 	elif get_global_pos().x > 512:
 		raked_x_vel = -400
 	velocity = Vector2(raked_x_vel, -100)
+	velocity.x += (randi() % 101) - 50
+	velocity.y += (randi() % 101) - 50
 	
 	rake_timer.start()
 

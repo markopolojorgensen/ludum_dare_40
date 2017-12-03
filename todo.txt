@@ -61,13 +61,13 @@ LEAF WARDEN
   Compo
     X always rake towards the middle
     X can't move as fast when charging or firing laser
+    X leaf raked velocity should be slightly randomized
+    re-autostart the music
     rake sfx
     laser charge sfx
     laser sfx
     music: bigger silence gaps for wind appreciation
     music: don't filter lead during intro, wait for bass
-    re-autostart the music
-    leaf raked velocity should be slightly randomized
     leaf spawn rate changes over time
     bug: needing to repress movement keys
     laser charge proportional to leaf count
