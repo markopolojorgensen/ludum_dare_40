@@ -65,7 +65,7 @@ LEAF WARDEN
     X too many leaves loses the game
     X you lost banner
     X game start banner
-    bug: needing to repress movement keys
+    X bug: needing to repress movement keys
     re-autostart the music
     rake sfx
     laser charge sfx
@@ -80,6 +80,7 @@ LEAF WARDEN
     leaf overhaul (more saturation / contrast with ground)
     leaf shadows should be lighter, especially when leaf is high off the ground
     game over wind should pick up grounded leaves
+    display score on game over
 
 
 
