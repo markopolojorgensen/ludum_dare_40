@@ -67,21 +67,31 @@ LEAF WARDEN
     X multiple leaves fall at the same time
     X leaves need to not fall up forever
     X leaves need to not fall outside the window horizontally
+    leaf counter shows how many leaves are on the ground
+    leaf raked velocity should be slightly randomized
     leaves re-pick destination when wrapping around the screen?
-    leaf spawn rate must be variable
-    leaf transition to starting position
-    leaf falling velocity variability varies propotionally to the wind speed
+    leaf spawn rate increases as time goes on
+    leaves have a transition to their starting position
+    leaf falling velocity variability varies proportionally to the wind speed (???)
     don't wrap leaves when being raked
   player
     X player can move
     X player can rake
     velocity lerp
     probably should have a frowny face while they get buried by leaves
+    bug: moving right while moving left?
   rake
     X raking moves leaves
     X can't rake while raking
+    rake in any direction
     can't move while raking
-    whirlwind attack (charge -> release)
+  laser
+    X charge up by holding rake button
+    X fires a giant laser
+    X deletes leaves in vertical line
+    laser in any direciton
+    strafe while charging or firing (can't look in a different direction)
+    can't move as fast when charging or firing
   leaf piles
     raking enough leaves together does something
   wind

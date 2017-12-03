@@ -117,11 +117,20 @@ func get_raked(rake):
 	
 	# todo:  handle rake orientation
 
+func get_lasered(laser):
+	if falling:
+		return
+	
+	queue_free()
+
 func leaf_body_enter(body):
-	# print("leaf detected a body: " + str(body))
-	if body.get_parent().has_method("is_rake") and body.get_parent().is_rake():
-		# print("got raked!")
-		get_raked(body.get_parent())
+	var body_parent = body.get_parent()
+	
+	if body_parent.has_method("is_rake") and body_parent.is_rake():
+		get_raked(body_parent)
+	
+	if body_parent.has_method("is_laser") and body_parent.is_laser():
+		get_lasered(body_parent)
 
 func shadow_body_enter(body):
 	# print("shadow detected a body: " + str(body))

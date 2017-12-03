@@ -4,14 +4,39 @@ onready var rake_sprite = get_node("rake_sprite")
 onready var rake_timer = get_node("rake_timer")
 onready var static_body = get_node("static_body")
 onready var anims = get_node("anims")
+onready var laser = get_node("laser")
 
 var raking
+var charging
 
 func _ready():
 	disable_collision()
+	laser.connect("finished_firing", self, "laser_end")
+
+func _process(delta):
+	if charging:
+		laser.charge(delta)
+
+func do_charge():
+	if not charging:
+		set_process(true)
+		charging = true
+		print("charging ma lazer")
+		rake_sprite.play("charge")
+
+func release_charge():
+	if not charging:
+		return
+	else:
+		set_process(false)
+		laser.fire()
+
+func laser_end():
+	rake_sprite.play("idle")
+	charging = false
 
 func do_rake():
-	if not raking:
+	if not raking and not charging:
 		raking = true
 		enable_collision()
 		rake_sprite.play("swing")
