@@ -58,6 +58,10 @@ something something coinbox hero
 
 The more you have, the worse it is.
 LEAF WARDEN
+  music
+    bigger silence gaps for wind appreciation
+    don't filter lead during intro, wait for bass
+    re-autostart the music
   uncat
     speed powerups?
     X git repo
@@ -83,12 +87,15 @@ LEAF WARDEN
   rake
     X raking moves leaves
     X can't rake while raking
+    rake sfx
     rake in any direction
     can't move while raking
   laser
     X charge up by holding rake button
     X fires a giant laser
     X deletes leaves in vertical line
+    laser sfx
+    maximum distance
     laser in any direciton
     strafe while charging or firing (can't look in a different direction)
     can't move as fast when charging or firing
@@ -96,10 +103,17 @@ LEAF WARDEN
     raking enough leaves together does something
   wind
     X wind blows falling leaves around
+    X wind sound effect
     wind speed increases with leaf presence
+    wind sound effect increases with leaf presence
     wind has a chance to blow grounded leaves back into the air
       chance increases with wind speed
     wind blows vertically as well as horizontally?
+  arena
+    X sweet zen garden
+    X sweet zen garden rock thing
+    X Ysort all the things
+
 
 
 

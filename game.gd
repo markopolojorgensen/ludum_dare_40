@@ -5,6 +5,8 @@ var leaf_scene = preload("res://leaf/leaf.tscn")
 var dims = Vector2(Globals.get("display/width"), Globals.get("display/height"))
 onready var wind = get_node("wind")
 
+onready var ysort = get_node("YSort")
+
 func _ready():
 	get_node("leaf_spawn_timer").connect("timeout", self, "new_leaf")
 	
@@ -20,5 +22,5 @@ func new_leaf():
 	var inst = leaf_scene.instance()
 	inst.set_dims(dims)
 	inst.set_wind(wind)
-	add_child(inst)
+	ysort.add_child(inst)
 

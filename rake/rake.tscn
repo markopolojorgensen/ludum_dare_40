@@ -46,7 +46,7 @@ tracks/0/keys = {
 "times": FloatArray( 0, 0.04, 0.09, 0.17, 0.2 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -40, -2 ), Vector2( -30, 44 ), Vector2( 26, 50 ), Vector2( 46, 34 ), Vector2( 36, 34 ) ]
+"values": [ Vector2( -39.6765, -48.2653 ), Vector2( -35.8236, -0.324104 ), Vector2( 24.3823, 3.7347 ), Vector2( 48.2647, -12.2653 ), Vector2( 34.7059, -12.2653 ) ]
 }
 
 [node name="rake" type="Node2D"]
@@ -62,9 +62,10 @@ autostart = false
 
 [node name="rake_sprite" type="AnimatedSprite" parent="."]
 
+transform/pos = Vector2( -1.79242, -46.2447 )
 transform/scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-animation = "charge"
+animation = "idle"
 
 [node name="laser" parent="." instance=ExtResource( 7 )]
 
@@ -73,7 +74,7 @@ transform/pos = Vector2( 25, 61 )
 
 [node name="static_body" type="StaticBody2D" parent="."]
 
-transform/pos = Vector2( -40, -2 )
+transform/pos = Vector2( -39.6765, -48.2653 )
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
