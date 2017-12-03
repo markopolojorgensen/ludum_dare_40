@@ -58,10 +58,29 @@ something something coinbox hero
 
 The more you have, the worse it is.
 LEAF WARDEN
-  music
-    bigger silence gaps for wind appreciation
-    don't filter lead during intro, wait for bass
+  Compo
+    X always rake towards the middle
+    X can't move as fast when charging or firing laser
+    rake sfx
+    laser charge sfx
+    laser sfx
+    music: bigger silence gaps for wind appreciation
+    music: don't filter lead during intro, wait for bass
     re-autostart the music
+    leaf raked velocity should be slightly randomized
+    leaf spawn rate changes over time
+    bug: needing to repress movement keys
+    laser charge proportional to leaf count
+    leaves periodically stop falling
+    wind fade out / in
+    wind speed increases with leaf presence
+
+
+
+  music
+    longer track
+    pad
+    more percussion?
   uncat
     speed powerups?
     X git repo
@@ -71,10 +90,8 @@ LEAF WARDEN
     X multiple leaves fall at the same time
     X leaves need to not fall up forever
     X leaves need to not fall outside the window horizontally
-    leaf counter shows how many leaves are on the ground
-    leaf raked velocity should be slightly randomized
+    X leaf counter shows how many leaves there are
     leaves re-pick destination when wrapping around the screen?
-    leaf spawn rate increases as time goes on
     leaves have a transition to their starting position
     leaf falling velocity variability varies proportionally to the wind speed (???)
     don't wrap leaves when being raked
@@ -83,35 +100,28 @@ LEAF WARDEN
     X player can rake
     velocity lerp
     probably should have a frowny face while they get buried by leaves
-    bug: moving right while moving left?
   rake
     X raking moves leaves
     X can't rake while raking
-    rake sfx
     rake in any direction
     can't move while raking
   laser
     X charge up by holding rake button
     X fires a giant laser
     X deletes leaves in vertical line
-    laser sfx
     maximum distance
     laser in any direciton
     strafe while charging or firing (can't look in a different direction)
-    can't move as fast when charging or firing
   leaf piles
     raking enough leaves together does something
   wind
     X wind blows falling leaves around
     X wind sound effect
-    wind fade out / in
-    wind speed increases with leaf presence
     wind sound effect increases with leaf presence
     wind has a chance to blow grounded leaves back into the air
       chance increases with wind speed
     wind blows vertically as well as horizontally?
   arena
-    always rake towards the middle?
     X sweet zen garden
     X sweet zen garden rock thing
     X Ysort all the things

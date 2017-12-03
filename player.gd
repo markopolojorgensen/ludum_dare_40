@@ -6,6 +6,7 @@ onready var charge_proc_timer = get_node("charge_proc_timer")
 var movement_intentions = Vector2()
 var velocity = Vector2()
 var speed = 300
+var slow_speed = 100
 
 func _ready():
 	set_process_unhandled_input(true)
@@ -14,7 +15,10 @@ func _ready():
 	charge_proc_timer.connect("timeout", self, "charge_proc")
 
 func _fixed_process(delta):
-	velocity = movement_intentions * speed
+	if rake.is_charging() or rake.is_raking():
+		velocity = movement_intentions * slow_speed
+	else:
+		velocity = movement_intentions * speed
 	var motion = velocity * delta
 	motion = move(motion)
 	

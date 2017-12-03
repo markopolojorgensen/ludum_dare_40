@@ -12,14 +12,19 @@ var charging
 func _ready():
 	disable_collision()
 	laser.connect("finished_firing", self, "laser_end")
+	set_process(true)
 
 func _process(delta):
+	if get_global_pos().x > 512:
+		rake_sprite.set_flip_h(true)
+	elif get_global_pos().x < 512:
+		rake_sprite.set_flip_h(false)
+	
 	if charging:
 		laser.charge(delta)
 
 func do_charge():
 	if not charging:
-		set_process(true)
 		charging = true
 		print("charging ma lazer")
 		rake_sprite.play("charge")
@@ -28,7 +33,6 @@ func release_charge():
 	if not charging:
 		return
 	else:
-		set_process(false)
 		laser.fire()
 
 func laser_end():
@@ -40,7 +44,7 @@ func do_rake():
 		raking = true
 		enable_collision()
 		rake_sprite.play("swing")
-		anims.play("collision_swing") # maybe need to reset static body position after swing?
+		# anims.play("collision_swing") # maybe need to reset static body position after swing?
 		
 		rake_timer.start()
 		yield(rake_timer, "timeout")
@@ -60,3 +64,15 @@ func enable_collision():
 
 func is_rake():
 	return true
+
+func is_charging():
+	return charging
+
+func is_raking():
+	return raking
+
+
+
+
+
+

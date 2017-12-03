@@ -108,20 +108,21 @@ func set_wind(new_wind):
 	wind = new_wind
 
 func get_raked(rake):
-	if falling:
-		# rake only works on grounded leaves
-		# print("  still falling tho")
-		return
-	if getting_raked:
-		# print("  still getting raked tho")
+	# rake only works on grounded leaves
+	if falling or getting_raked:
 		return
 	
-	# print("getting raked...")
 	getting_raked = true
-	velocity = Vector2(400, -100)
-	rake_timer.start()
 	
-	# todo:  handle rake orientation
+	var raked_x_vel
+	if get_global_pos().x < 512:
+		raked_x_vel = 400
+	elif get_global_pos().x > 512:
+		raked_x_vel = -400
+	velocity = Vector2(raked_x_vel, -100)
+	
+	rake_timer.start()
+
 
 func get_lasered(laser):
 	if falling:
