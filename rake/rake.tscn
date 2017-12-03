@@ -70,7 +70,7 @@ animation = "idle"
 [node name="laser" parent="." instance=ExtResource( 7 )]
 
 visibility/visible = false
-transform/pos = Vector2( 25, 61 )
+transform/pos = Vector2( 24.2, 14.7 )
 
 [node name="static_body" type="StaticBody2D" parent="."]
 

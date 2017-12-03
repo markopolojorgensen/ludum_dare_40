@@ -104,12 +104,14 @@ LEAF WARDEN
   wind
     X wind blows falling leaves around
     X wind sound effect
+    wind fade out / in
     wind speed increases with leaf presence
     wind sound effect increases with leaf presence
     wind has a chance to blow grounded leaves back into the air
       chance increases with wind speed
     wind blows vertically as well as horizontally?
   arena
+    always rake towards the middle?
     X sweet zen garden
     X sweet zen garden rock thing
     X Ysort all the things

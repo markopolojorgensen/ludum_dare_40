@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://wind.tscn" type="PackedScene" id=4]
 [ext_resource path="res://3_whole_viewers.ogg" type="AudioStream" id=5]
 [ext_resource path="res://ground.tex" type="Texture" id=6]
+[ext_resource path="res://leaf_counter.tscn" type="PackedScene" id=7]
 
 [node name="game" type="Node2D"]
 
@@ -60,6 +61,8 @@ z/z = -10
 z/relative = false
 texture = ExtResource( 6 )
 centered = false
+
+[node name="leaf_counter" parent="." instance=ExtResource( 7 )]
 
 [connection signal="timeout" from="music/pre_music_timer" to="music" method="play"]
 

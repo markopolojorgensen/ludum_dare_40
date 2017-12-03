@@ -17,12 +17,14 @@ var dims
 var velocity = Vector2(0, 50)
 
 func _ready():
-	pick_dest()
+	add_to_group("leaf")
 	
 	get_node("shadow_area").connect("body_enter", self, "shadow_body_enter")
 	get_node("leaf_area").connect("body_enter", self, "leaf_body_enter")
 	
 	get_node("rake_timer").connect("timeout", self, "done_getting_raked")
+	
+	pick_dest()
 	
 	var start = dest
 	start.y -= 400
