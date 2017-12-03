@@ -19,10 +19,10 @@ sort/enabled = true
 
 transform/pos = Vector2( 757.99, 411.583 )
 
-[node name="Sprite" type="Sprite" parent="YSort"]
+[node name="rock" type="Sprite" parent="YSort"]
 
-transform/pos = Vector2( 505, 410.637 )
-transform/scale = Vector2( 4, 4 )
+transform/pos = Vector2( 504.8, 412.4 )
+transform/scale = Vector2( 3.56, 3.56 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, -16 )
 

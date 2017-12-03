@@ -42,8 +42,11 @@ func done_getting_raked():
 
 func _fixed_process(delta):
 	dest.x = get_global_pos().x
-	shadow_sprite.set_global_pos(dest)
-	shadow_area.set_global_pos(dest)
+	var shadow_pos = Vector2(dest)
+	shadow_pos.x -= 2.5
+	shadow_pos.y += 8
+	shadow_sprite.set_global_pos(shadow_pos)
+	shadow_area.set_global_pos(shadow_pos)
 	
 	if getting_raked:
 		velocity *= 0.9
@@ -83,6 +86,7 @@ func do_fall(delta):
 	
 	do_setpos_move(actual_velocity, delta)
 	
+	# did the leaf hit the ground?
 	if get_pos().y >= dest.y:
 		falling = false
 
