@@ -26,7 +26,7 @@ func _process(delta):
 func do_charge():
 	if not charging:
 		charging = true
-		print("charging ma lazer")
+		# print("charging ma lazer")
 		rake_sprite.play("charge")
 
 func release_charge():

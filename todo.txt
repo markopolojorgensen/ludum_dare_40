@@ -62,6 +62,10 @@ LEAF WARDEN
     X always rake towards the middle
     X can't move as fast when charging or firing laser
     X leaf raked velocity should be slightly randomized
+    X too many leaves loses the game
+    X you lost banner
+    X game start banner
+    bug: needing to repress movement keys
     re-autostart the music
     rake sfx
     laser charge sfx
@@ -69,11 +73,13 @@ LEAF WARDEN
     music: bigger silence gaps for wind appreciation
     music: don't filter lead during intro, wait for bass
     leaf spawn rate changes over time
-    bug: needing to repress movement keys
     laser charge proportional to leaf count
     leaves periodically stop falling
     wind fade out / in
     wind speed increases with leaf presence
+    leaf overhaul (more saturation / contrast with ground)
+    leaf shadows should be lighter, especially when leaf is high off the ground
+    game over wind should pick up grounded leaves
 
 
 

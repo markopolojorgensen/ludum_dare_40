@@ -46,7 +46,7 @@ func fire():
 		
 		enable_collision()
 		firing = true
-		print("blam: %.2f" % height)
+		# print("blam: %.2f" % height)
 		non_deformed_sprite.play("ready")
 		deformed_sprite.play("fire")
 		

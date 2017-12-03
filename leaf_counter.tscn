@@ -4,13 +4,14 @@
 
 [node name="leaf_counter" type="Panel"]
 
+visibility/self_opacity = 0.43
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 100.0
+margin/right = 200.0
 margin/bottom = 40.0
 script/script = ExtResource( 1 )
 
@@ -20,7 +21,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
-margin/left = 0.0
+margin/left = 10.0
 margin/top = 0.0
 margin/right = 48.0
 margin/bottom = 40.0
