@@ -6,6 +6,6 @@ func get_windspeed():
 	return windspeed
 
 func lose_game():
-	windspeed = -1000
+	windspeed = -200
 
 

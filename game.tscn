@@ -1,14 +1,16 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
-[ext_resource path="res://player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://rockin_rock.tex" type="Texture" id=3]
-[ext_resource path="res://wind.tscn" type="PackedScene" id=4]
-[ext_resource path="res://3_whole_viewers.ogg" type="AudioStream" id=5]
-[ext_resource path="res://ground.tex" type="Texture" id=6]
-[ext_resource path="res://leaf_counter.tscn" type="PackedScene" id=7]
-[ext_resource path="res://game_over.tex" type="Texture" id=8]
-[ext_resource path="res://game_start.tex" type="Texture" id=9]
+[ext_resource path="res://camera.gd" type="Script" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://rockin_rock.tex" type="Texture" id=4]
+[ext_resource path="res://wind.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3_whole_viewers_take_2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://ground.tex" type="Texture" id=7]
+[ext_resource path="res://leaf_counter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game_over.tex" type="Texture" id=9]
+[ext_resource path="res://game_start.tex" type="Texture" id=10]
+[ext_resource path="res://score.gd" type="Script" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -31,11 +33,31 @@ tracks/0/keys = {
 
 script/script = ExtResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 2 )
+
 [node name="YSort" type="YSort" parent="."]
 
 sort/enabled = true
 
-[node name="player" parent="YSort" instance=ExtResource( 2 )]
+[node name="player" parent="YSort" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 757.99, 411.583 )
 
@@ -43,7 +65,7 @@ transform/pos = Vector2( 757.99, 411.583 )
 
 transform/pos = Vector2( 504.8, 412.4 )
 transform/scale = Vector2( 3.56, 3.56 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 0, -16 )
 
 [node name="leaf_spawn_timer" type="Timer" parent="."]
@@ -60,11 +82,11 @@ wait_time = 30.0
 one_shot = true
 autostart = false
 
-[node name="wind" parent="." instance=ExtResource( 4 )]
+[node name="wind" parent="." instance=ExtResource( 5 )]
 
 [node name="music" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 5 )
+stream/stream = ExtResource( 6 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 5.0
@@ -85,10 +107,10 @@ autostart = true
 transform/scale = Vector2( 21.333, 21.333 )
 z/z = -10
 z/relative = false
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 centered = false
 
-[node name="leaf_counter" parent="." instance=ExtResource( 7 )]
+[node name="leaf_counter" parent="." instance=ExtResource( 8 )]
 
 margin/top = 1.0
 margin/bottom = 41.0
@@ -171,14 +193,14 @@ margin/bottom = 200.0
 visibility/visible = false
 transform/pos = Vector2( -20, -20 )
 transform/scale = Vector2( 3, 3 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="game_start" type="Sprite" parent="CanvasLayer/Panel/VBoxContainer/banner_panel/CenterContainer/Panel"]
 
 visibility/self_opacity = 0.0
 transform/pos = Vector2( -20, -20 )
 transform/scale = Vector2( 3, 3 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="spacer1" type="Panel" parent="CanvasLayer/Panel/VBoxContainer"]
 
@@ -203,6 +225,42 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="score" type="Label" parent="."]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1.0
+margin/top = 740.0
+margin/right = 52.0
+margin/bottom = 754.0
+custom_colors/font_color = Color( 0.0849552, 0.0841675, 0.109375, 1 )
+text = "Score: 0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 11 )
+
+[node name="respite_countdown" type="Label" parent="."]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 454.0
+margin/top = 281.0
+margin/right = 505.0
+margin/bottom = 295.0
+custom_colors/font_color = Color( 0.0849552, 0.0841675, 0.109375, 1 )
+text = "0"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="timeout" from="music/pre_music_timer" to="music" method="play"]
 

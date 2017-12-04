@@ -1,60 +1,60 @@
 [gd_scene load_steps=32 format=1]
 
 [ext_resource path="res://laser/laser.gd" type="Script" id=1]
-[ext_resource path="res://laser/laser_indicator.tex" type="Texture" id=2]
-[ext_resource path="res://laser/laser_blast_1.tex" type="Texture" id=3]
-[ext_resource path="res://laser/laser_blast_2.tex" type="Texture" id=4]
-[ext_resource path="res://laser/laser_blast_3.tex" type="Texture" id=5]
-[ext_resource path="res://laser/laser_blast_4.tex" type="Texture" id=6]
-[ext_resource path="res://laser/laser_blast_5.tex" type="Texture" id=7]
-[ext_resource path="res://laser/laser_blast_6.tex" type="Texture" id=8]
-[ext_resource path="res://laser/laser_blast_7.tex" type="Texture" id=9]
-[ext_resource path="res://laser/laser_blast_8.tex" type="Texture" id=10]
-[ext_resource path="res://laser/laser_blast_9.tex" type="Texture" id=11]
-[ext_resource path="res://laser/laser_blast_10.tex" type="Texture" id=12]
-[ext_resource path="res://laser/laser_ball_2.tex" type="Texture" id=13]
-[ext_resource path="res://laser/laser_ball_5.tex" type="Texture" id=14]
-[ext_resource path="res://laser/laser_ball_4.tex" type="Texture" id=15]
-[ext_resource path="res://laser/laser_ball_6.tex" type="Texture" id=16]
-[ext_resource path="res://laser/laser_ball_7.tex" type="Texture" id=17]
-[ext_resource path="res://laser/laser_ball_8.tex" type="Texture" id=18]
-[ext_resource path="res://laser/laser_ball_9.tex" type="Texture" id=19]
-[ext_resource path="res://laser/laser_charge_1.tex" type="Texture" id=20]
-[ext_resource path="res://laser/laser_charge_2.tex" type="Texture" id=21]
-[ext_resource path="res://laser/laser_charge_3.tex" type="Texture" id=22]
-[ext_resource path="res://laser/laser_charge_4.tex" type="Texture" id=23]
-[ext_resource path="res://laser/laser_charge_5.tex" type="Texture" id=24]
-[ext_resource path="res://laser/laser_charge_6.tex" type="Texture" id=25]
-[ext_resource path="res://laser/laser_charge_7.tex" type="Texture" id=26]
-[ext_resource path="res://laser/laser_charge_8.tex" type="Texture" id=27]
-[ext_resource path="res://laser/laser_charge_9.tex" type="Texture" id=28]
+[ext_resource path="res://laser/laser_blast_1.tex" type="Texture" id=2]
+[ext_resource path="res://laser/laser_blast_2.tex" type="Texture" id=3]
+[ext_resource path="res://laser/laser_blast_3.tex" type="Texture" id=4]
+[ext_resource path="res://laser/laser_blast_4.tex" type="Texture" id=5]
+[ext_resource path="res://laser/laser_blast_5.tex" type="Texture" id=6]
+[ext_resource path="res://laser/laser_blast_6.tex" type="Texture" id=7]
+[ext_resource path="res://laser/laser_blast_7.tex" type="Texture" id=8]
+[ext_resource path="res://laser/laser_blast_8.tex" type="Texture" id=9]
+[ext_resource path="res://laser/laser_blast_9.tex" type="Texture" id=10]
+[ext_resource path="res://laser/laser_blast_10.tex" type="Texture" id=11]
+[ext_resource path="res://laser/laser_indicator.tex" type="Texture" id=12]
+[ext_resource path="res://laser/laser_charge_1.tex" type="Texture" id=13]
+[ext_resource path="res://laser/laser_charge_2.tex" type="Texture" id=14]
+[ext_resource path="res://laser/laser_charge_3.tex" type="Texture" id=15]
+[ext_resource path="res://laser/laser_charge_4.tex" type="Texture" id=16]
+[ext_resource path="res://laser/laser_charge_5.tex" type="Texture" id=17]
+[ext_resource path="res://laser/laser_charge_6.tex" type="Texture" id=18]
+[ext_resource path="res://laser/laser_charge_7.tex" type="Texture" id=19]
+[ext_resource path="res://laser/laser_charge_8.tex" type="Texture" id=20]
+[ext_resource path="res://laser/laser_charge_9.tex" type="Texture" id=21]
+[ext_resource path="res://laser/laser_ball_2.tex" type="Texture" id=22]
+[ext_resource path="res://laser/laser_ball_5.tex" type="Texture" id=23]
+[ext_resource path="res://laser/laser_ball_4.tex" type="Texture" id=24]
+[ext_resource path="res://laser/laser_ball_6.tex" type="Texture" id=25]
+[ext_resource path="res://laser/laser_ball_7.tex" type="Texture" id=26]
+[ext_resource path="res://laser/laser_ball_8.tex" type="Texture" id=27]
+[ext_resource path="res://laser/laser_ball_9.tex" type="Texture" id=28]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "indicator",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "fire",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "indicator",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "ready",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "charge",
 "speed": 13.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "ready",
+"speed": 12.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=3]
@@ -87,7 +87,7 @@ offset = Vector2( -9, -9 )
 [node name="fire_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 1.6
 one_shot = true
 autostart = false
 

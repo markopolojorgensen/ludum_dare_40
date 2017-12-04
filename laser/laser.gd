@@ -50,9 +50,12 @@ func fire():
 		non_deformed_sprite.play("ready")
 		deformed_sprite.play("fire")
 		
+		get_tree().call_group(0, "laser_fire", "laser_start")
+		
 		fire_timer.start()
 		yield(fire_timer, "timeout")
 		
+		get_tree().call_group(0, "laser_fire", "laser_end")
 		
 		charge_amount = 0
 		hide()

@@ -66,23 +66,30 @@ LEAF WARDEN
     X you lost banner
     X game start banner
     X bug: needing to repress movement keys
-    re-autostart the music
-    rake sfx
-    laser charge sfx
-    laser sfx
-    music: bigger silence gaps for wind appreciation
-    music: don't filter lead during intro, wait for bass
-    leaf spawn rate changes over time
-    laser charge proportional to leaf count
-    leaves periodically stop falling
-    wind fade out / in
-    wind speed increases with leaf presence
+    X leaves periodically stop falling
+    X wind fade out / in
+    X more leaves -> shorter break
+    X music: bigger silence gaps for wind appreciation
+    X music: don't filter lead during intro, wait for bass
+    X rake sfx
+    X laser charge sfx
+    X laser sfx
+    X display score on game over
+    X screen shake
+    X too many leaves gauge
+    X display respite time to user
+    X re-autostart the music
+    X leaf spawn rate changes over time
+    X leaf shadows should be lighter, especially when leaf is high off the ground
+    main menu
+    burn leaves
+    high score
     leaf overhaul (more saturation / contrast with ground)
-    leaf shadows should be lighter, especially when leaf is high off the ground
+    wind speed increases with leaf presence
     game over wind should pick up grounded leaves
-    display score on game over
 
 
+    laser charge proportional to leaf count
 
   music
     longer track

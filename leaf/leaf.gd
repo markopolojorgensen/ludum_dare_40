@@ -7,10 +7,13 @@ onready var shadow_area = get_node("shadow_area")
 # timer for how long to fly when getting raked
 onready var rake_timer = get_node("rake_timer")
 
+const start_height = 400
+
 var wind
 
 var getting_raked = false
 var falling = true
+var fallen_once = false
 var dest = Vector2()
 var dims
 
@@ -27,10 +30,11 @@ func _ready():
 	pick_dest()
 	
 	var start = dest
-	start.y -= 400
+	start.y -= start_height
 	set_global_pos(start)
 	
 	set_fixed_process(true)
+	set_process(true)
 
 func do_setpos_move(actual_velocity, delta):
 	var pos = get_pos()
@@ -41,6 +45,11 @@ func done_getting_raked():
 	getting_raked = false
 	falling = true
 	velocity.y += 80
+
+func _process(delta):
+	var percent = (dest.y - get_global_pos().y) / 400
+	percent = lerp(0, 1, clamp(1 - percent, 0, 1))
+	shadow_sprite.set_modulate(Color(1,1,1, percent))
 
 func _fixed_process(delta):
 	dest.x = get_global_pos().x
@@ -78,10 +87,10 @@ func do_fall(delta):
 	
 	# wrap position if leaf blows off the screen
 	# (wrapping trigger is not actually currently off the screen)
-	if dest.x > (dims.x - 50):
-		set_pos(get_pos() - Vector2(dims.x - 100, 0))
-	elif dest.x < 50:
-		set_pos(get_pos() + Vector2(dims.x - 100, 0))
+	if dest.x > (dims.x + 5):
+		set_pos(get_pos() - Vector2(dims.x + 5, 0))
+	elif dest.x < -5:
+		set_pos(get_pos() + Vector2(dims.x + 5, 0))
 	
 	# add windspeed for this frame
 	var actual_velocity = velocity + Vector2(wind.get_windspeed(), 0)
@@ -91,7 +100,7 @@ func do_fall(delta):
 	# did the leaf hit the ground?
 	if get_pos().y >= dest.y:
 		falling = false
-
+		fallen_once = true
 
 func pick_dest():
 	randomize()
@@ -116,9 +125,9 @@ func get_raked(rake):
 	
 	var raked_x_vel
 	if get_global_pos().x < 512:
-		raked_x_vel = 400
+		raked_x_vel = 800
 	elif get_global_pos().x > 512:
-		raked_x_vel = -400
+		raked_x_vel = -800
 	velocity = Vector2(raked_x_vel, -100)
 	velocity.x += (randi() % 101) - 50
 	velocity.y += (randi() % 101) - 50
@@ -130,6 +139,8 @@ func get_lasered(laser):
 	if falling:
 		return
 	
+	get_tree().call_group(0, "leaf_death", "leaf_death")
+	remove_from_group("leaf")
 	queue_free()
 
 func leaf_body_enter(body):
@@ -144,4 +155,7 @@ func leaf_body_enter(body):
 func shadow_body_enter(body):
 	# print("shadow detected a body: " + str(body))
 	pass
+
+func has_hit_the_ground():
+	return fallen_once
 
