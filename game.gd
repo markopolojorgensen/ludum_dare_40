@@ -17,6 +17,7 @@ onready var rock_sprite = get_node("YSort/rock")
 
 onready var game_over_banner = get_node("CanvasLayer/Panel/VBoxContainer/banner_panel/CenterContainer/Panel/game_over")
 onready var game_start_banner = get_node("CanvasLayer/Panel/VBoxContainer/banner_panel/CenterContainer/Panel/game_start")
+onready var score = get_node("score")
 
 onready var leaf_spawn_timer = get_node("leaf_spawn_timer")
 onready var respite_timer = get_node("respite_timer")
@@ -25,7 +26,6 @@ var total_leaves = 0
 var in_respite = false
 var game_lost = false
 
-var score = 0
 var leaf_death_counter = 0
 
 
@@ -102,13 +102,14 @@ func new_leaf():
 
 func lose_game():
 	if not game_lost:
-		game_over_banner.show()
 		game_lost = true
+		game_over_banner.show()
 		in_respite = false
 		#leaf_spawn_timer.stop()
 		#leaf_spawn_timer.set_wait_time(0.05)
 		leaf_spawn_timer.start()
 		wind.lose_game()
+		score.stop()
 		
 		#for leaf in get_tree().get_nodes_in_group("leaf"):
 		#	var pos = leaf.get_pos()
