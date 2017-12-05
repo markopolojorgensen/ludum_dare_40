@@ -5,6 +5,7 @@ signal hard_mode
 
 # onready var leaf_counter_label = get_node("VBoxContainer/leaf_counter/Label")
 onready var respite_label = get_node("VBoxContainer/Panel/respite_length/Label")
+onready var game_over_delay = get_node("game_over_delay")
 
 const max_respite_length = 30
 var respite_length = 30
@@ -13,7 +14,6 @@ var respite_active = false
 var leaf_count = 0
 var lose_count = 150
 var lost = false
-var quit_count = 200
 
 func _ready():
 	set_process(true)
@@ -38,8 +38,8 @@ func _process(delta):
 	if leaf_count > lose_count and not lost:
 		emit_signal("lose_game")
 		lost = true
-	
-	if leaf_count > quit_count:
+		game_over_delay.start()
+		yield(game_over_delay, "timeout")
 		get_tree().change_scene("res://game.tscn")
 
 func update_respite_text():
