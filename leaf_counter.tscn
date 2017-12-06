@@ -127,7 +127,7 @@ radial_fill/center_offset = Vector2( 0, 0 )
 [node name="game_over_delay" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 5.0
 one_shot = true
 autostart = false
 

@@ -38,19 +38,19 @@ extents = Vector2( 60, 15 )
 [sub_resource type="SampleLibrary" id=3]
 
 samples/blast = {
-"db": -10.0,
+"db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 8 )
 }
 samples/charge = {
-"db": -10.0,
+"db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 9 )
 }
 samples/swing = {
-"db": -25.0,
+"db": -15.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 10 )

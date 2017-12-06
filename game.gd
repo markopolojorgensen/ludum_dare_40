@@ -91,7 +91,7 @@ func leaf_death():
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().set_input_as_handled()
-		get_tree().quit()
+		get_tree().change_scene("res://main_menu.tscn")
 
 func new_leaf():
 	var inst = leaf_scene.instance()

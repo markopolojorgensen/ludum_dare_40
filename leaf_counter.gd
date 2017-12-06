@@ -12,7 +12,7 @@ var respite_length = 30
 var respite_active = false
 
 var leaf_count = 0
-var lose_count = 150
+var lose_count = 175
 var lost = false
 
 func _ready():
@@ -40,7 +40,7 @@ func _process(delta):
 		lost = true
 		game_over_delay.start()
 		yield(game_over_delay, "timeout")
-		get_tree().change_scene("res://game.tscn")
+		get_tree().change_scene("res://main_menu.tscn")
 
 func update_respite_text():
 	var respite_text = "Length of Next Respite: " + str(respite_length)
