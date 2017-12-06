@@ -2,10 +2,10 @@
 
 [ext_resource path="res://rake/rake.gd" type="Script" id=1]
 [ext_resource path="res://rake/rake_1.tex" type="Texture" id=2]
-[ext_resource path="res://rake/rake_charge.tex" type="Texture" id=3]
-[ext_resource path="res://rake/rake_2.tex" type="Texture" id=4]
-[ext_resource path="res://rake/rake_4.tex" type="Texture" id=5]
-[ext_resource path="res://rake/rake_5.tex" type="Texture" id=6]
+[ext_resource path="res://rake/rake_2.tex" type="Texture" id=3]
+[ext_resource path="res://rake/rake_4.tex" type="Texture" id=4]
+[ext_resource path="res://rake/rake_5.tex" type="Texture" id=5]
+[ext_resource path="res://rake/rake_charge.tex" type="Texture" id=6]
 [ext_resource path="res://laser/laser.tscn" type="PackedScene" id=7]
 [ext_resource path="res://rake/rake_blast.smp" type="Sample" id=8]
 [ext_resource path="res://rake/rake_charge.smp" type="Sample" id=9]
@@ -19,21 +19,21 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "charge",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": false,
 "name": "swing",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "charge",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 40, 10 )
+extents = Vector2( 60, 15 )
 
 [sub_resource type="SampleLibrary" id=3]
 
@@ -70,21 +70,21 @@ autostart = false
 [node name="rake_sprite" type="AnimatedSprite" parent="."]
 
 transform/pos = Vector2( 0, -46 )
-transform/scale = Vector2( 4, 4 )
+transform/scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "idle"
 
 [node name="laser" parent="." instance=ExtResource( 7 )]
 
 visibility/visible = false
-transform/pos = Vector2( 0, 14.7 )
+transform/pos = Vector2( 0, 30 )
 
 [node name="static_body" type="StaticBody2D" parent="."]
 
-transform/pos = Vector2( 34.7059, -12.2653 )
+transform/pos = Vector2( 0, 10 )
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -95,7 +95,6 @@ bounce = 0.0
 
 [node name="big_collision_shape" type="CollisionShape2D" parent="static_body"]
 
-transform/pos = Vector2( 0, -1 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
